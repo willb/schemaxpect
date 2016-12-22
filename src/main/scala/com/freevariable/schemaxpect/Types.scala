@@ -5,13 +5,13 @@ abstract class Width { def width: Int }
 abstract class IntWidth extends Width {}
 abstract class FPWidth extends Width {}
 
-case object Byte extends IntWidth { def width = 8 }
-case object Short extends IntWidth { def width = 16 }
+case object ByteW extends IntWidth { def width = 8 }
+case object ShortW extends IntWidth { def width = 16 }
 
-case object Int extends IntWidth { def width = 32 }
-case object Long extends IntWidth { def width = 64 }
-case object Float extends FPWidth { def width = 32 }
-case object Double extends FPWidth { def width = 64 }
+case object IntW extends IntWidth { def width = 32 }
+case object LongW extends IntWidth { def width = 64 }
+case object FloatW extends FPWidth { def width = 32 }
+case object DoubleW extends FPWidth { def width = 64 }
 
 abstract class TypeExpectation { 
   def widerThan(other: TypeExpectation) = TypeExpectation.widerThan(this, other) 
